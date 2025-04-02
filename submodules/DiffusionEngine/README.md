@@ -1,2 +1,0 @@
-# DiffusionEngine
-`python main.py`
