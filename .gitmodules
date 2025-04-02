@@ -4,3 +4,6 @@
 [submodule "DiffusionEngine"]
 	path = DiffusionEngine
 	url = git@github.com:Thesis-DiME/DiffusionEngine.git
+[submodule "EvalMuseMini"]
+	path = EvalMuseMini
+	url = git@github.com:Thesis-DiME/EvalMuseMini.git
