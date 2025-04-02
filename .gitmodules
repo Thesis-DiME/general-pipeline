@@ -1,9 +1,9 @@
 [submodule "fundamental-metric"]
-	path = fundamental-metric
+	path = submodules/fundamental-metric
 	url = git@github.com:Thesis-DiME/fundamental-metric.git
 [submodule "DiffusionEngine"]
-	path = DiffusionEngine
+	path = submodules/DiffusionEngine
 	url = git@github.com:Thesis-DiME/DiffusionEngine.git
 [submodule "EvalMuseMini"]
-	path = EvalMuseMini
+	path = submodules/EvalMuseMini
 	url = git@github.com:Thesis-DiME/EvalMuseMini.git
