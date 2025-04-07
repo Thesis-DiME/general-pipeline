@@ -1,0 +1,10 @@
+defaults:
+  - generation@generation: sd
+  - evaluation/fundamental_metrics@evaluation.fundamental_metrics: fundamental_metrics
+  - evaluation/eval_muse@evaluation.eval_muse: eval_muse
+  - _self_
+
+device: cuda
+csv_path: /home/naumov/code/general-pipeline/submodules/fundamental_metrics/output1.csv
+save_path: /home/naumov/code/general-pipeline/submodules/fundamental_metrics/output1.json
+metadata_path: /home/naumov/code/general-pipeline/data/generated_images/stable-diffusion-v1-5-stable-diffusion-v1-5/3/metadata.json

@@ -1,0 +1,6 @@
+defaults:
+  - _self_
+
+prompts_file: ${hydra:runtime.cwd}/submodules/EvalMuseMini/data/dataset/prompts.json
+repo_id: stable-diffusion-v1-5/stable-diffusion-v1-5
+model_name: null
