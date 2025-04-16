@@ -1,3 +1,4 @@
 include:
-  - fundamental-metric/compose.yml
-  - DiffusionEngine/compose.yml
+  - monitoring/compose.yml
+  - submodules/fundamental_metrics/compose.yml
+  - submodules/DiffusionEngine/compose.yml
