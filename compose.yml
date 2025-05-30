@@ -30,25 +30,25 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-     - ./data:images:ro
-     - ./results:results
+      - ./data:images:ro
+      - ./results:results
      
-     <<: *defaults
+    <<: *defaults
 
-  qualiclip:
-    build:
-      context: ./submodules/QualiClip
-      tags: 
-        - "qualiclip:main"
-    container_name: qualiclip
-    depends_on:
-      diffusion-engine:
-        condition: service_completed_successfully
-    volumes:
-     - ./data:images:ro
-     - ./results:results
+  # qualiclip:
+  #   build:
+  #     context: ./submodules/QualiClip
+  #     tags: 
+  #       - "qualiclip:main"
+  #   container_name: qualiclip
+  #   depends_on:
+  #     diffusion-engine:
+  #       condition: service_completed_successfully
+  #   volumes:
+  #    - ./data:images:ro
+  #    - ./results:results
 
-     <<: *defaults
+  #    <<: *defaults
 
 volumes:
   images:
