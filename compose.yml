@@ -26,6 +26,20 @@ services:
      - ./data:images:ro
      - ./results:results
 
+  qualiclip:
+    build:
+      context: ./submodules/QualiClip
+      tags: 
+        - "qualiclip:main"
+    container_name: qualiclip
+    network_mode: host
+    depends_on:
+      diffusion-engine:
+        condition: service_completed_successfully
+    volumes:
+     - ./data:images:ro
+     - ./results:results
+
 volumes:
   images:
   results:
