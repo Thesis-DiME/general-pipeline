@@ -2,16 +2,6 @@ include:
   - monitoring/compose.yml
 
 services:
-  fundamental-metric:
-    build:
-      context: ./submodules/fundamental_metrics/
-      tags: 
-        - "fundamental-metrics:main"
-    container_name: fundamental-metrics
-    network_mode: host
-    volumes:
-      - ./results:/results
-
   diffusion-engine:
     build:
       context: ./submodules/DiffusionEngine/
@@ -20,4 +10,22 @@ services:
     container_name: diffusion-engine 
     network_mode: host
     volumes:
-      - ./data:/data
+      - ./data/generated_images:images
+
+  fundamental-metrics:
+    build:
+      context: ./submodules/fundamental_metrics/
+      tags: 
+        - "fundamental-metrics:main"
+    container_name: fundamental-metrics
+    network_mode: host
+    depends_on:
+      diffusion-engine:
+        condition: service_completed_successfully
+    volumes:
+     - ./data:images:ro
+     - ./results:results
+
+volumes:
+  images:
+  results:
