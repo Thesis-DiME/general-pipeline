@@ -50,6 +50,21 @@ services:
 
      <<: *defaults
 
+  evalmusemini:
+    build:
+      context: ./submodules/evalmusemini
+      tags: 
+        - "evalmusemini:main"
+    container_name: evalmusemini
+    depends_on:
+      diffusion-engine:
+        condition: service_completed_successfully
+    volumes:
+      - images:./data:ro
+      - results:./results
+
+     <<: *defaults
+
 volumes:
   images:
   results:
