@@ -48,7 +48,7 @@ services:
       - images:/app/data:ro
       - results:/app/results
 
-     <<: *defaults
+    <<: *defaults
 
   evalmusemini:
     build:
@@ -63,7 +63,7 @@ services:
       - images:/app/data:ro
       - results:/app/results
 
-     <<: *defaults
+    <<: *defaults
 
 volumes:
   images:
