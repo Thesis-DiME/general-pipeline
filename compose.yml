@@ -54,7 +54,7 @@ services:
 
   evalmusemini:
     build:
-      context: ./submodules/evalmusemini
+      context: ./submodules/EvalMuseMini/
       tags: 
         - "evalmusemini:main"
     container_name: evalmusemini
