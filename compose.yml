@@ -16,7 +16,7 @@ services:
         - "diffusion-engine:main"
     container_name: diffusion-engine 
     volumes:
-      - images:./data/generated_images
+      - images:/app/data/generated_images
       
     <<: *defaults
     
@@ -30,8 +30,8 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-      - images:./data:ro
-      - results:./results
+      - images:/app/data:ro
+      - results:/app/results
      
     <<: *defaults
 
@@ -45,8 +45,8 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-      - images:./data:ro
-      - results:./results
+      - images:/app/data:ro
+      - results:/app/results
 
      <<: *defaults
 
@@ -60,8 +60,8 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-      - images:./data:ro
-      - results:./results
+      - images:/app/data:ro
+      - results:/app/results
 
      <<: *defaults
 
