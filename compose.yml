@@ -26,7 +26,7 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-      - images:/app/data:ro
+      - images:/app/data/generated_images:ro
       - results:/app/results
     network_mode: host
     runtime: nvidia
@@ -44,7 +44,7 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-      - images:/app/data:ro
+      - images:/app/data/generated_images:ro
       - results:/app/results
     network_mode: host
     runtime: nvidia
@@ -62,7 +62,7 @@ services:
       diffusion-engine:
         condition: service_completed_successfully
     volumes:
-      - images:/app/data:ro
+      - images:/app/data/generated_images:ro
       - results:/app/results
     network_mode: host
     runtime: nvidia

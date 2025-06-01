@@ -34,6 +34,11 @@ scrape_configs:
     static_configs:
       - targets: ['pushgateway:9091']
 
+  - job_name: 'nvidia_gpu_exporter'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['nvidia_smi_exporter:9835']
+
 
 alerting:
   alertmanagers:
